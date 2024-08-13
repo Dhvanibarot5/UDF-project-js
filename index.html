@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // factorial
+      console.log("Factorial Program");
+      
+      const factorial = (a) => {
+        let fact = 1;
+        for (let i = 1; i <= a; i++) {
+          fact = fact * i;
+        }
+
+        return fact;
+      };
+      console.log(factorial(5));
+      console.log(factorial(6));
+
+      // area of circle
+      console.log("Area of circle Program");
+
+
+      const areaOfCircle = (radius)=>{
+        const pi = 3.1415;
+        return (pi * radius * radius).toFixed(2);
+
+      }
+
+      console.log(areaOfCircle(12));
+      console.log(areaOfCircle(21));
+
+      // area of square
+      console.log("Area of square Program");
+
+      const areaOfSquare = (side)=>{
+        return side * side;
+      }
+
+      console.log(areaOfSquare(4));
+      console.log(areaOfSquare(5));
+
+      // palindrome
+      console.log("Palindrome Program");
+
+      const palindrome = (name) => {
+        let flag = 1;
+        let arr = name.split("");
+        console.log(arr);
+
+        for (let i = 0; i < arr.length / 2; i++) {
+          if (arr[i] != arr[arr.length - 1 - i]) {
+            flag = 0;
+            break;
+          } 
+        }
+
+        if (flag) {
+          return `${name} is a Palindrome.`;
+        } else {
+          return `${name} is not a Palindrome.`;
+        }
+      };
+
+      console.log(palindrome("nayan"));
+      console.log(palindrome("12321"));
+    </script>
+  </body>
+</html>
